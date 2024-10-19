@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Proxy</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+        }
+        .navbar {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+        }
+        button:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Proxy</a>
+        <a href="games.html">Games</a>
+    </div>
+    <h1>123445</h1>
+    <input type="text" id="url" placeholder="Enter URL" />
+    <button onclick="submitUrl()">Go</button>
+
+    <script>
+        function submitUrl() {
+            const url = document.getElementById('url').value;
+            // Redirect to your proxy endpoint
+            // Change this to your backend proxy URL once hosted
+            window.location.href = `https://your-backend-url/proxy?url=${encodeURIComponent(url)}`;
+        }
+    </script>
+</body>
+</html>
