@@ -1,1 +1,2 @@
-
+Flask==2.3.3  # or FastAPI, depending on your preference
+requests      # for forwarding HTTP requests
